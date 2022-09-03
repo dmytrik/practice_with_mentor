@@ -1,0 +1,2 @@
+const n=document.querySelector(".pokemon-list");(async function(){const n=await fetch("https://pokeapi.co/api/v2/pokemon").then((n=>n.json())).then((n=>n.results)),o=[];for(const t of n){const n=await fetch(t.url).then((n=>n.json()));o.push(n)}return o})().then((function(o){console.log(o);const t=o.map((n=>`<li class="pokemon-card" data-pokemon=${n.name}>\n    <h2>${n.name}</h2>\n    <img width ='200' height = '200' src=${n.sprites.other.dream_world.front_default}  />\n  </li>`)).join("");n.innerHTML=t}));
+//# sourceMappingURL=index.2bd1cb4d.js.map
